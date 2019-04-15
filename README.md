@@ -1,4 +1,7 @@
+<center><img src="logo.png"  width="400"/></center>
+
 # psg-challenge
+
 Data Challenge X-PSG
 
 Notebook : 
