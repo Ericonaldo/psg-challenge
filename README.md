@@ -1,4 +1,4 @@
-<center><img src="logo.png"  width="400"/></center>
+<center><img src="images/logo.png"  width="400"/></center>
 
 # psg-challenge
 
@@ -14,6 +14,16 @@ The goal of this challenge is to predict four different values out of an XML fil
 - Predict the id of this unknonw player (out of all players that played at least 800 min during the first part of the season, ie around 230 players)
 - Predict features of the next event : What team will it concern ? (Away or Home team) Where will be the ball during this event ? (Position X,Y)
 
-To do so, we have at our disposition all the games that occur during the first part of the season. I've kept 4 differents matchdays (around 80 games) to test my prediction on unseen data.
+<center><img src="images/PSG_active_players.jpg"  width="400"/></center>
 
-At the end, i achieved around **21%** accuracy (id correct player predicted out of 230 possible choices) (CF Notebook)
+
+In the notebook (link above), i have tried to explained step by step my work in this challenge.
+
+On around 20% of the database we had that I kept unseen, I approximatly get the following results (CF Notebook)
+
+
+| Metrics     | Player    |Team  | X,Y     |
+| --- | --- | --- | --- |
+| Nb  Classes | 230       | 2    | linear  |
+| Accuracy (%)|  21       |80    |         |
+| MSE\MAE     |           |      |  536\17 |
