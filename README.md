@@ -25,3 +25,36 @@ On ~20% of the database we had that I kept unseen, I get the following results (
 | Nb  Classes | 230       | 2    | linear  |
 | Accuracy (%)|  21       |80    |         |
 | MSE\MAE     |           |      |  536\17 |
+
+## Configuration 
+
+- keras=2.2.4
+- tensorflow-gpu=1.12.0
+- numpy=1.15.4
+- pandas=0.23.4
+- tqdm=4.31.1
+- joblib=0.13.2 
+- scikit-learn=0.20.2
+- lxml
+
+## Files 
+
+- **pickle** : bunch of dictionnary saved as pickle files (time_per_player.pickle, team_squad_active.pickle, team_squad.pickle, qualifier_ids.pickle, event_ids.pickle).
+
+- **h5** : weights of neural networks model to predict the team of the next event (team_prediction.h5) as well as the position of the next event (x_y.h5).
+
+- **model_compressed_1.joblib**: compressed weights and object structure of the Random Forest Classifier that we use to predict the unknown player.
+
+## Scripts   
+
+- **main_psgx.py** : a unique function Resultat() that takes in input the path to a xml file and return 4 values : a player id, the next team (0 or 1) and the position y and x.
+
+- **install_psgx.py** : installations files with os.system instructions to install all packages.
+
+- **event_prediction.py** :  all functions related to the prediction of the next event (team and position).
+
+- **player_prediction.py** :  all functions related to the prediction of the unknown player.
+
+- **team_trick.py** : short script that deals with the team trick I'm referring to in the notebook.
+
+- **load_data.py** : functions related to the xml parser to transform xml files into dataframes.
